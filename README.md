@@ -36,3 +36,4 @@
 
 ## Wins & Challenges
 
+* The `TypeError` we were getting was because the API only returns an array when the request is successful and returns an object if there is an error like the username not being found or being rate limited. We solved this by manually `throw`ing if the response was not an array.

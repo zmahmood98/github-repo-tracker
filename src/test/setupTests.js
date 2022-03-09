@@ -10,7 +10,7 @@ import thunk from 'redux-thunk';
 import { reducer } from '../reducers';
 
 const TestProviders = ({ initState }) => {
-    initState ||= { username: "", results: [], loading: false };
+    initState = { username: "", results: [], loading: false, ...initState };
     let testReducer = () => reducer(initState, { type: '@@INIT' })
     const testStore = createStore(testReducer, applyMiddleware(thunk))
 

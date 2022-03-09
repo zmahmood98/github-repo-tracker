@@ -36,3 +36,20 @@ h1 {
     padding-right: 10px;
     border-radius: 5px;
 }
+
+.repo-section {
+    line-height: 40px;
+    font-weight: 200;
+}
+
+
+
+.result-item {
+    background-color: rgb(212, 193, 255);
+    width: 320px;
+    text-align: center;
+    margin: 15px;
+    padding: 20px;
+    display: inline-block;
+}
+

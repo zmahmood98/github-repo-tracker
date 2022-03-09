@@ -1,10 +1,11 @@
 import React from 'react';
-import { WholePage } from './components';
+import { Form, Result } from './components';
 
 export default function App() {
     return (
         <>
-            <WholePage />
+            <Form />
+            <Result />
         </>
-    )
+    );
 }

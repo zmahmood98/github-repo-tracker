@@ -8,7 +8,7 @@ export default function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({type: "SET_USERNAME", payload: username});
+        dispatch({type: "LOADING", payload: username});
         e.target.reset();
     };
 

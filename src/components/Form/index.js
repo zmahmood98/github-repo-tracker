@@ -17,17 +17,23 @@ export default function Form() {
     };
 
     return (
+        <section className="header">
+            <h1>GitHub Repository Search</h1>
+            <p>Search a GitHub username to see their repositories!</p>
+            <br></br>
         <form 
             aria-label="Search Bar" 
             onSubmit={handleSubmit}
         >
             <input 
                 aria-label="Github username" 
+                className="user-search"
                 onChange={updateValue}
                 type="input" 
                 value={username}
             />
-            <button type="submit"></button>
+            <input type="submit" value="Search" className='submit-button'></input>
         </form>
+        </section>
     );
 }

@@ -11,14 +11,14 @@ describe("Search render", () => {
     });
 
     test('it renders an error message if receiving an error', () => {
-        let initState = { error: true };
+        let initState = { username: "", results: [], error: true, loading: false };
         renderWithReduxProvider(<Result />, { initState });
         let error = screen.getByRole('alert')
         expect(error.textContent).toContain("Error: ");
     });
 
     test('it renders a loading message when loading', () => {
-        let initState = { loading: true };
+        let initState = { username:"", results: [], error: false, loading: true };
         renderWithReduxProvider(<Result />, { initState });
         let content = screen.getByText("Loading ...")
         expect(content).toBeInTheDocument();

@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { getRepos } from '../../actions';
 
 export default function Result() {
     const username = useSelector(state => state.username);
@@ -13,7 +14,7 @@ export default function Result() {
     ));
 
     useEffect(() => {
-        // dispatch action to get repos
+        dispatch(getRepos(username));
     }, [username])
 
     return (

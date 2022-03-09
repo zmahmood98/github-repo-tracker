@@ -18,7 +18,8 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/actions/",
-      "/reducers/"
+      "/reducers/index.js",
+      "/components/index.js"
     ]
   },
   "keywords": [],

@@ -59,3 +59,10 @@ h3 {
     display: inline-block;
 }
 
+.result-item > h3 > a {
+    color: inherit;
+}
+
+.result-item > h3 > a:hover {
+    opacity: 0.65;
+}

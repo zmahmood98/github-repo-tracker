@@ -19,8 +19,9 @@ export default function Result() {
     }, [username])
 
     return (
-        <section>
-            {username && <h2>{username}'s Repositories</h2>}
+        <>
+        {username && <h2>{username}'s Repositories</h2>}
+        <section className="repo-section">
             {
                 loading ?
                 <h1>Loading ...</h1> :
@@ -31,5 +32,6 @@ export default function Result() {
                 )
             }
         </section>
+        </>
     );
 }

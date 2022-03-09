@@ -15,7 +15,7 @@ export default function Result() {
     ));
 
     useEffect(() => {
-        dispatch(getRepos(username));
+        username && dispatch(getRepos(username));
     }, [username])
 
     return (

@@ -5,11 +5,10 @@ export default function Form() {
     const initialUsername = useSelector(state => state.username);
     const [username, setUsername] = useState(initialUsername);
     const dispatch = useDispatch();
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type: "LOADING", payload: username});
-        e.target.reset();
     };
 
     const updateValue = (e) => {
@@ -22,6 +21,7 @@ export default function Form() {
             <p>Search a GitHub username to see their repositories!</p>
             <br></br>
         <form 
+            role="search" 
             aria-label="Search Bar" 
             onSubmit={handleSubmit}
         >
@@ -29,7 +29,8 @@ export default function Form() {
                 aria-label="Github username" 
                 className="user-search"
                 onChange={updateValue}
-                type="input" 
+                type="search" 
+                placeholder="GitHub username" 
                 value={username}
             />
             <button type="submit" className='submit-button'>Search</button>

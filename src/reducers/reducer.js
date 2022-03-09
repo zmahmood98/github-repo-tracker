@@ -5,9 +5,9 @@ const reducer = (state = initState, action) => {
         case 'LOADING':
             return { ...state, username: action.payload, loading: true };
         case 'LOAD_REPOS':
-            return { ...state, result: action.payload, loading: false};
+            return { ...state, result: action.payload, loading: false, error: false };
         case 'SET_ERROR':
-            return { ...state, error: action.payload};
+            return { ...state, error: action.payload, loading: false};
         default: 
             return state; 
     };

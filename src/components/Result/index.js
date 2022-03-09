@@ -20,7 +20,7 @@ export default function Result() {
 
     return (
         <>
-        {username && <h2>{username}'s Repositories</h2>}
+        {username && <h2>{username}'s Repositories ({results.length})</h2>}
         <section className="repo-section">
             {
                 loading ?

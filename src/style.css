@@ -19,6 +19,12 @@ h1 {
     padding: 20px;
 }
 
+h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .header {
     background-color:#6e5494;
     text-align: center;

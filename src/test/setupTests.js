@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import reducer from '../reducers';
+import { reducer } from '../reducers';
 
 const TestProviders = ({ initState }) => {
     initState ||= { username: "", results: [], loading: false };

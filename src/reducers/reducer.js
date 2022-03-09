@@ -1,9 +1,11 @@
-const initState = { username: "" }
+const initState = { username: "", results: [], loading: false}
 
 const reducer = (state = initState, action) => {
     switch(action.type) {
+        case 'LOADING':
+            return { ...state, username: action.payload, loading: true };
         case 'LOAD_REPOS':
-            return { ...state, username: action.payload};
+            return { ...state, result: action.payload, loading: false};
         case 'SET_ERROR':
             return { ...state, error: action.payload};
         default: 

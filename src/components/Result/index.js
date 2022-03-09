@@ -20,6 +20,7 @@ export default function Result() {
 
     return (
         <section>
+            {username && <h2>{username}'s Repositories</h2>}
             {
                 loading ?
                 <h1>Loading ...</h1> :

@@ -6,7 +6,8 @@ describe("Result Item", () => {
         name: "test_repo_name",
         forks_count: 4,
         stargazers_count: 5,
-        open_issues: 6
+        open_issues: 6,
+        html_url: "test_repo_url"
     };
 
     beforeEach(() => {
@@ -22,6 +23,15 @@ describe("Result Item", () => {
         const heading = screen.getByRole("heading");
         expect(heading).toBeInTheDocument();
         expect(heading).toHaveTextContent(testData.name);
+    });
+
+    it("heading contains link to repo", () => {
+        const heading = screen.getByRole("heading");
+        const link = screen.getByRole("link");
+        expect(link).toBeInTheDocument();
+        expect(heading).toContainElement(link);
+        expect(link.target).toBe("_blank");
+        expect(link).toHaveAttribute("href", testData.html_url);
     });
 
     it("renders fork count", () => {

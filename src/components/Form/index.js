@@ -27,7 +27,7 @@ export default function Form() {
                 type="input" 
                 value={username}
             />
-            <button type="submit"></button>
+            <button type="submit">Search</button>
         </form>
     );
 }

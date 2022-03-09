@@ -8,7 +8,7 @@ export default function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({type: "SET_USERNAME", payload: username});
+        dispatch({type: "LOADING", payload: username});
         e.target.reset();
     };
 
@@ -32,7 +32,7 @@ export default function Form() {
                 type="input" 
                 value={username}
             />
-            <input type="submit" value="Search" className='submit-button'></input>
+            <button type="submit" className='submit-button'>Search</button>
         </form>
         </section>
     );

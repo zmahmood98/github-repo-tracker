@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { ResultItem } from "..";
 import { getRepos } from '../../actions';
 
 export default function Result() {
@@ -14,7 +15,7 @@ export default function Result() {
     ));
 
     useEffect(() => {
-        dispatch(getRepos(username));
+        username && dispatch(getRepos(username));
     }, [username])
 
     return (

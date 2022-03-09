@@ -1,6 +1,5 @@
 import { default as Form } from ".";
-import { screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { screen } from "@testing-library/react";
 
 describe("Search Form", () => {
     beforeEach(() => {
